@@ -332,6 +332,16 @@ public class CreateNoteActivity extends AppCompatActivity {
             }
         });
 
+        layoutMiscellaneous.findViewById(R.id.layoutShareNote).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+                    shareNote();
+
+            }
+        });
+
         layoutMiscellaneous.findViewById(R.id.layoutAddUrl).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -509,5 +519,24 @@ public class CreateNoteActivity extends AppCompatActivity {
             });
         }
         dialogAddURL.show();
+    }
+
+    public void shareNote(){
+        String title, subTitle, text, url, message;
+        title=inputNoteTitle.getText().toString();
+        subTitle=inputNoteSubtitle.getText().toString();
+        text=inputNoteText.getText().toString();
+        url=textWebURL.getText().toString();
+        if(url.equals("")){
+            message= title + "\n" + subTitle + "\n" + text;
+        }else{
+            message=title + "\n" + subTitle + "\n" + text + "\n" + "url: " + url;
+        }
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, message);
+        sendIntent.setType("text/plain");
+        sendIntent.setPackage("com.whatsapp");
+        startActivity(sendIntent);
     }
 }
