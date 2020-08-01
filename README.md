@@ -22,3 +22,7 @@ Implements the following Android elements.
  ![Search Notes](images/SearchNotes.jpeg)
  ![Whatsapp Share](images/WhatsappShare.jpeg)
  
+### To Do List
+- [ ] Convert Room Database to JSON Structure to store on firebase
+- [ ] Add Login Support for online databackup
+- [ ] Finishing Changes Save on exit
