@@ -1,6 +1,5 @@
 # NewNotesApp
 ## Added Functionalities for sharing note through WhatsApp. 
-### Notes App Similar to app developed by [Chirag Kachhadiya](https://youtu.be/hlkekoPqsis)
 ---
 A beautifully designed predominantly dark, notes app.
 A personal training project to use newer UI/UX elements and room database structure.
@@ -26,3 +25,5 @@ Implements the following Android elements.
 - [ ] Convert Room Database to JSON Structure to store on firebase
 - [ ] Add Login Support for online databackup
 - [ ] Finishing Changes Save on exit
+
+#### Notes App Similar to app developed by [Chirag Kachhadiya](https://youtu.be/hlkekoPqsis)
